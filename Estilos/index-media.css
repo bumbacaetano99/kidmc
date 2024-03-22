@@ -1,0 +1,126 @@
+@charset "UTf-8";
+
+
+@media screen and (min-width: 400px) {
+  
+  }
+/* Despositivos extrapequenas (telefones, 600px e inferiores) */
+@media only screen and (max-width: 600px) {
+#btn-mobile{
+    display: block;
+}
+#menu{
+  display: block;
+   position: absolute;
+   width: 100%;
+   top: 70px;
+   right: 0;
+   background: black;
+   height: 0px;
+   transition: .6s;
+   z-index: 10000;
+   visibility: hidden;
+   overflow-y: hidden;
+}
+#nav.active #menu{
+  height: calc(100vh - 70px);
+  visibility: visible;
+  overflow-y: auto;
+ 
+
+}
+a:hover{
+ background-color: rgb(255, 255, 255);
+ color: black;
+ display: inline-block;
+ transition: .6s;
+ transform: scale(1.05);/*aumentar zoom*/
+}
+#menu a{
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, .05);
+}
+/*Criando botão do menu-hamburguer*/
+#btn-mobile{
+  display: flex;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+ 
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  gap:.5rem ;
+}
+
+#hamburguer{
+  /*color:*/
+  display: block;
+  width: 20px;
+  border-top: 2px solid;
+  
+}
+#hamburguer::after, #hamburguer::before {
+  width: 20px;
+  height: 2px;
+  display: block;
+  content: '';
+  background: currentColor;
+  margin-top: 5px;
+  transition: .3s;
+  position: relative;
+  
+}
+#nav.active #hamburguer{
+  
+  border-top-color:transparent ;
+}
+#nav.active #hamburguer::before{
+transform: rotate(135deg);
+}
+#nav.active #hamburguer::after{
+transform: rotate(-135deg);
+top: -7px;
+}
+
+/*Final do menu hamburguer*/
+}
+
+/* Despositivos pequenos (tablets retratos e telefones grandes, 600px e superior) */
+@media only screen and (min-width: 600px) {
+   
+
+}
+
+/*Despositivos medios (tablets em paisagem, 768px e  superior) */
+@media only screen and (min-width: 768px) {
+
+
+ 
+  
+  
+ 
+} 
+
+/* Despositivos grandes (laptops/desktops, 992px  e superior) */
+@media only screen and (min-width: 992px) {
+  
+ 
+    
+}
+
+/* Despositivos Extragrandes (large laptops and desktops, 1200px e superior) */
+@media only screen and (min-width: 1200px) {
+   
+
+}
+@media screen  and (max-width:  3000px) {
+ 
+        
+    
+}
+@media screen and (max-width:780px){
+   
+    
+ }

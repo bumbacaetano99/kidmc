@@ -1,0 +1,119 @@
+@charset "UTf-8";
+
+
+@media screen and (min-width: 400px) {
+  
+  }
+/* Despositivos extrapequenas (telefones, 600px e inferiores) */
+@media only screen and (max-width: 600px) {
+    h1{
+        text-align: center;
+    }
+   
+    p{
+        font-size: xx-small;
+    }
+    h1{
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Despositivos pequenos (tablets retratos e telefones grandes, 600px e superior) */
+@media only screen and (min-width: 600px) {
+    .nivel{
+        font-size: 10px;
+    }
+    .nivel{
+        text-align: center;
+    }
+    h1{
+        text-align: left;
+        font-size: medium;
+    }
+   
+
+}
+
+/*Despositivos medios (tablets em paisagem, 768px e  superior) */
+@media only screen and (min-width: 768px) {
+img{
+    display: block;
+    margin-left: none;
+    margin-right: none;
+}
+    .menu{
+        display: none;
+    }
+    menu{
+        display: block;
+    }
+    menu > ul> li{
+        display: inline-block;
+        text-align: center;
+    }
+    main{
+        width: 90vw;
+        padding: 100px;
+       
+       
+    }
+    h1{
+        text-align: center;
+        margin-right: 700px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+  .lado{
+    font-size: 15px;
+
+    margin-left: 300px;
+ 
+  
+  
+  }
+.esquerda{
+    float: left;
+}
+ 
+footer > p{
+    padding: 15px;
+    font-size: 10pt;
+    display: inline-block;
+    text-align: center;
+    text-align: center;
+    margin-right: 50px;
+    padding: 50px;
+  
+}
+
+footer{
+    display: inline;
+    text-align: center;
+   
+    
+}
+  
+} 
+
+/* Despositivos grandes (laptops/desktops, 992px  e superior) */
+@media only screen and (min-width: 992px) {
+ 
+    
+}
+
+/* Despositivos Extragrandes (large laptops and desktops, 1200px e superior) */
+@media only screen and (min-width: 1200px) {
+   
+
+}
+@media screen  and (max-width:  3000px) {
+ 
+        
+    
+}
+@media screen and (max-width:780px){
+   
+    
+ }

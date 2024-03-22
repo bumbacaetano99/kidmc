@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 600px) {
+    p{
+        font-size: large;
+    }
+    section#img02{
+    
+    background-position: bottom center;
+    background-size: cover;
+}
+section#img03{
+   
+    background-position: bottom center;
+    background-size: cover;
+}
+section#img04{
+   
+    background-position: bottom center;
+    background-size: cover;
+}
+section#img05{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img06{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img07{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img08{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img09{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img10{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img11{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img12{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img13{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img14{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img15{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+
+section#img16{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img17{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img18{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img19{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+section#img20{
+   
+   background-position: bottom center;
+   background-size: cover;
+}
+footer > p{
+font-size: 10pt;
+
+}
+}
+
+@media only screen  and(min-width: 600px){
+    section >p{
+    padding-bottom: 2em;
+   font-size: 50pt;
+}
+p{
+    font-size: 200pt;
+
+}
+header{
+background-color: blue;
+}
+    
+}
+body, html{
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    background-color:#010b26;
+    color: white;
+    text-align: center;
+}
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 10vw;
+   
+}
+header >p{
+    padding-bottom: 50px;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
+
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgb(51,51,51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.342);
+    background-attachment: fixed;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 2.5vw;
+
+}
+section >p{
+    padding-bottom: 2em;
+}
+section.imagem >p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.233);
+    text-shadow: 2px 2px 0px black;
+}
+section#img01{
+    background-image: url(../Imagens/telefones/kid-mc45.jpg);
+    background-position: right center;
+    background-size: cover;
+   
+
+}
+section#img02{
+    background-image: url(../Imagens/telefones/kid-mc9.jpg);
+    background-size: cover;
+}
+section#img03{
+    background-image: url(../Imagens/telefones/kid-mc43.jpg);
+    background-size: cover;
+}
+section#img04{
+    background-image: url(../Imagens/telefones/kid-mc37.jpg);
+    background-size: cover;
+}
+section#img05{
+    background-image: url(../Imagens/telefones/kid-mc44.jpg);
+    background-size: cover;
+}
+section#img06{
+    background-image: url(../Imagens/telefones/kid-mc15.jpg);
+    background-size: cover;
+
+}
+section#img07{
+    background-image: url(../Imagens/telefones/kid-mc36.jpg);
+    background-size: cover;
+  
+}
+section#img08{
+    background-image: url(../Imagens/telefones/kid-mc3.jpg);
+    background-size: cover;
+}
+section#img09{
+    background-image: url(../Imagens/telefones/kid-mc4.jpg);
+    background-size: cover;
+
+}
+section#img10{
+   background-image: url(../Imagens/telefones/kid-mc33.jpg);
+    background-size: cover;
+}
+section#img11{
+    background-image: url(../Imagens/telefones/kid-mc14.jpg);
+    background-size: cover;
+}
+section#img12{
+    background-image: url(../Imagens/telefones/kid-mc24.jpg);
+    background-size: cover;
+}
+section#img13{
+    background-image: url(../Imagens/telefones/kid-mc57.jpg);
+    background-size: cover;
+}
+section#img14{
+    background-image: url(../Imagens/telefones/kid-mc34.jpg);
+    background-size: cover;
+}
+section#img15{
+    background-image: url(../Imagens/telefones/kid-mc46.jpg);
+    background-size: cover;
+}
+section#img16{
+    background-image: url(../Imagens/telefones/kid-mc28.jpg);
+    background-size: cover;
+}
+section#img17{
+    background-image: url(../Imagens/telefones/kid-mc40.jpg);
+    background-size: cover;
+}
+section#img18{
+    background-image: url(../Imagens/telefones/kid-mc17.jpg);
+    background-size: cover;
+}
+section#img19{
+    background-image: url(../Imagens/telefones/kid-mc10.jpg);
+    background-size: cover;
+}
+section#img20{
+    background-image: url(../Imagens/telefones/kid-mc39.jpg);
+    background-size: cover;
+    
+}
+
+
+footer p{
+font-size: 10pt;
+
+}
+
+
+footer{
+background-color:  #010b26;
+color: white;
+text-align: center;
+padding: 15px;
+}
+
+@media only screen  and(max-width: 768px){
+
+   footer> p{
+     font-size: 200px;
+   }
+    }
