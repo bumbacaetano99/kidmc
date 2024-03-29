@@ -255,10 +255,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e)=>{
         musica.play() 
         melhoresmusicas.classList.remove('bi-play-fill')
         melhoresmusicas.classList.add('bi-pause-fill')
-        //download_musica.href=
-
-        
-
+        download_musica.href=`audio/${index}.mp3`//Baixar Musicas//
         let TitulosMusicas = musicas.filter((els)=>{
             return els.id==index
         })
@@ -266,6 +263,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e)=>{
             let {nomeMusica}=elss
             titulo.innerHTML= nomeMusica
            // poster_melhores_musicas.src= poster
+            download_musica.setAttribute('download', nomeMusica)
 
         })
 
