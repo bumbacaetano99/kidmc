@@ -242,6 +242,7 @@ const makeAllBackground= ()=>{
 // Funcao procurar musicas//
 let index=0
 let poster_melhores_musicas= document.getElementById('poster_melhores_musicas')
+let download_musica=document.getElementById('download_musica')
 let titulo= document.getElementById('titulo')
 
 
@@ -254,6 +255,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e)=>{
         musica.play() 
         melhoresmusicas.classList.remove('bi-play-fill')
         melhoresmusicas.classList.add('bi-pause-fill')
+        //download_musica.href=
 
         
 
