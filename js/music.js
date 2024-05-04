@@ -207,6 +207,62 @@ Array.from(document.getElementsByClassName('itens_sons')).forEach((e, i)=>{
     e.getElementsByTagName('h5')[0].innerHTML=musicas[i].nomeMusica
 
 })
+
+/**Pesquisar musicas */
+//Comecar Procurar Dados 
+let procurar_musicas=document.getElementsByClassName('procurar_musicas')[0]
+
+musicas.forEach(element => {
+    const {id, nomeMusica, poster}=element
+    //console.log(nomeMusica)
+    let cartao = document.createElement('a')
+    cartao.classList.add('cartao')
+    cartao.href="#"+id
+
+
+    cartao.innerHTML=`
+        <img  src="${poster}" alt=""> 
+            <div class="content">
+                  
+                ${nomeMusica}
+            </div>
+            
+    `
+    procurar_musicas.appendChild(cartao)
+    
+});
+
+let input= document.getElementsByTagName('input')[0]
+
+input.addEventListener('keyup', ()=>{
+    let input_value= input.value.toUpperCase()
+    let items= procurar_musicas.getElementsByTagName('a')
+
+    for (let index = 0; index < items.length; index++) {
+        let as = items[index].getElementsByClassName('content')[0]
+        let text_value=as.textContent || as.innerHTML
+
+
+        if (text_value.toUpperCase().indexOf(input_value) > -1) {
+            items[index].style.display="flex"
+            
+        } else {
+            items[index].style.display="none"
+        }
+        if (input_value==0) {
+            procurar_musicas.style.display="none"
+            
+        } else {
+            procurar_musicas.style.display=""
+        }
+        
+    }
+})
+//Fim na Procura dos dados
+
+
+/**Fim da pesquisa musica */
+
 /**Função de tocar e pausar a musica/Equalizador */
 let melhoresmusicas= document.getElementById('melhoresmusicas')
 let wave= document.getElementById('wave')
@@ -242,7 +298,7 @@ const makeAllBackground= ()=>{
 // Funcao procurar musicas//
 let index=0
 let poster_melhores_musicas= document.getElementById('poster_melhores_musicas')
-let download_musica=document.getElementById('download_musica')
+let download_musica = document.getElementById('download_musica')
 let titulo= document.getElementById('titulo')
 
 
@@ -263,7 +319,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e)=>{
             let {nomeMusica}=elss
             titulo.innerHTML= nomeMusica
            // poster_melhores_musicas.src= poster
-            download_musica.setAttribute('download', nomeMusica)
+           download_musica.setAttribute('download', nomeMusica);
 
         })
 
@@ -358,7 +414,7 @@ let proximo= document.getElementById('proximo')
 
 voltar.addEventListener('click', ()=>{
     index -=1
-    if (index < 1){
+    if (index <1){
         index= Array.from(document.getElementsByClassName('itens_sons')).length
 
     }
@@ -390,7 +446,7 @@ voltar.addEventListener('click', ()=>{
 })
 proximo.addEventListener('click', ()=>{
     index ++
-    if (index > 1) {
+    if (index < 1) {
         index= Array.from(document.getElementsByClassName('itens_sons')).length
         index=1
         
@@ -442,8 +498,6 @@ musicas_populares_recuar .addEventListener('click', ()=>{
 let artistas_populares_recuar= document.getElementById('artistas_populares_recuar')
 let artistas_populares_avancar= document.getElementById('artistas_populares_avancar')
 let artistas_bx=document.getElementsByClassName('artistas_bx')[0]
-
-
 artistas_populares_avancar.addEventListener('click', ()=>{
     artistas_bx.scrollLeft  +=330
 })
@@ -451,3 +505,137 @@ artistas_populares_recuar .addEventListener('click', ()=>{
     artistas_bx.scrollLeft  -=330
 })
   /**Fim das setas */
+  /**Fim das setas */
+/**Funçao de random, next e repetição */
+let shuffle = document.getElementsByClassName('shuffle')[0];
+shuffle.addEventListener('click', () => {
+    let a= shuffle.innerHTML;
+
+    switch (a) {
+          case "next":
+              shuffle.classList.add('bi-arrow-repeat');
+              shuffle.classList.remove('bi-music-note-beamed');
+              shuffle.classList.remove('bi-shuffle');
+              shuffle.innerHTML = 'repeat';
+              break;
+          case "repeat":
+              shuffle.classList.remove('bi-arrow-repeat');
+              shuffle.classList.remove('bi-music-note-beamed');
+              shuffle.classList.add('bi-shuffle');
+              shuffle.innerHTML = 'random';
+              break;
+          case "random":
+              shuffle.classList.remove('bi-arrow-repeat');
+              shuffle.classList.add('bi-music-note-beamed');
+              shuffle.classList.remove('bi-shuffle');
+              shuffle.innerHTML = 'next';
+              break;
+    }
+});
+/**Fim da Funçao de random, next e repetição */
+
+const prox_musica = ()=>{
+     if (index == musicas.length) {
+        index=1
+        
+    } else {
+        index++
+        
+    }
+    musica.src= `audio/${index}.mp3`//Colocar(poster) e procurar musicas//
+    poster_melhores_musicas.src=`Imagens/telefones/${index}.jpg`      
+    musica.play() 
+    melhoresmusicas.classList.remove('bi-play-fill')
+    melhoresmusicas.classList.add('bi-pause-fill')
+    download_musica.href=`audio/${index}.mp3`//Baixar Musicas//
+    let TitulosMusicas = musicas.filter((els)=>{
+            return els.id==index
+        })
+    TitulosMusicas.forEach(elss =>{
+        let {nomeMusica}=elss
+        titulo.innerHTML= nomeMusica
+        // poster_melhores_musicas.src= poster
+        download_musica.setAttribute('download', nomeMusica);
+
+        })
+
+        makeAllBackground()
+        Array.from(document.getElementsByClassName('itens_sons'))[index - 1 ].style.background='rgb(105,105,105, .1)'
+        makeAllplays()
+        e1.target.classList.remove('bi-play-circle-fill')
+        e1.target.classList.add('bi-pause-circle-fill')
+        wave.classList.add('active1')
+    }
+const repeat_musica = ()=>{
+    index
+    musica.src= `audio/${index}.mp3`//Colocar(poster) e procurar musicas//
+    poster_melhores_musicas.src=`Imagens/telefones/${index}.jpg`      
+    musica.play() 
+    melhoresmusicas.classList.remove('bi-play-fill')
+    melhoresmusicas.classList.add('bi-pause-fill')
+    download_musica.href=`audio/${index}.mp3`//Baixar Musicas//
+    let TitulosMusicas = musicas.filter((els)=>{
+            return els.id==index
+        })
+    TitulosMusicas.forEach(elss =>{
+        let {nomeMusica}=elss
+        titulo.innerHTML= nomeMusica
+        // poster_melhores_musicas.src= poster
+        download_musica.setAttribute('download', nomeMusica);
+
+        })
+
+        makeAllBackground()
+        Array.from(document.getElementsByClassName('itens_sons'))[index - 1 ].style.background='rgb(105,105,105, .1)'
+        makeAllplays()
+        e1.target.classList.remove('bi-play-circle-fill')
+        e1.target.classList.add('bi-pause-circle-fill')
+        wave.classList.add('active1')
+    }
+    const random_musica = ()=>{
+   if (index==musicas.length) {
+     index=1
+   } else {
+        index= Math.floor((Math.random()* musicas.length)+1)
+   }
+    musica.src= `audio/${index}.mp3`//Colocar(poster) e procurar musicas//
+    poster_melhores_musicas.src=`Imagens/telefones/${index}.jpg`      
+    musica.play() 
+    melhoresmusicas.classList.remove('bi-play-fill')
+    melhoresmusicas.classList.add('bi-pause-fill')
+    download_musica.href=`audio/${index}.mp3`//Baixar Musicas//
+    let TitulosMusicas = musicas.filter((els)=>{
+            return els.id==index
+        })
+    TitulosMusicas.forEach(elss =>{
+        let {nomeMusica}=elss
+        titulo.innerHTML= nomeMusica
+        // poster_melhores_musicas.src= poster
+        download_musica.setAttribute('download', nomeMusica);
+
+        })
+
+        makeAllBackground()
+        Array.from(document.getElementsByClassName('itens_sons'))[index - 1 ].style.background='rgb(105,105,105, .1)'
+        makeAllplays()
+        e1.target.classList.remove('bi-play-circle-fill')
+        e1.target.classList.add('bi-pause-circle-fill')
+        wave.classList.add('active1')
+    }
+
+musica.addEventListener('ended', ()=>{
+  let b =shuffle.innerHTML
+  switch (b) {
+    case 'repeat':
+        repeat_musica()
+        break;
+    case 'next':
+        prox_musica_musica()
+        break;
+    case 'random':
+        random_musica()
+        break;
+  }
+        
+
+})
