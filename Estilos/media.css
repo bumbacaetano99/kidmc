@@ -1,1 +1,182 @@
+@media screen and (max-width:1200px) {
 
+    /*Telas grandes*/
+    header {
+        width: 95%;
+        transition: .5s linear;
+
+    }
+
+    header .menu_lateral,
+    .musicas_lateral {
+        width: 30%;
+    }
+
+    header .musicas_lateral {
+        width: 70%;
+    }
+
+    header .musicas_lateral .content {
+        height: 18%;
+    }
+    header .menu_lateral h6 {
+     display: none;
+
+    }
+
+
+}
+
+@media screen and (max-width: 930px) {
+    header .menu_lateral {
+        width: 40%;
+        z-index: 999;
+        position: absolute;
+        transition: 1s linear;
+        transform: translateX(-100%);
+    }
+
+
+
+
+    header .musicas_lateral {
+        width: 100%;
+
+
+    }
+
+    header .melhores_musicas {
+
+        position: absolute;
+        bottom: 0;
+    }
+
+    header .menu_lateral h6 {
+        position: absolute;
+        right: -40px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        background: #111727;
+        border-radius: 0px 10px 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 1s linear;
+
+    }
+
+    header {
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    header {
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    header .musicas_lateral nav ul li {
+        font-size: 11px;
+        margin-right: 10px;
+
+    }
+
+    header .musicas_lateral nav .pesquisar {
+        width: auto;
+    }
+
+    header .menu_lateral {
+        width: 60%;
+    }
+
+    header .melhores_musicas {
+        z-index: 999999999999999999999999999;
+    }
+
+    header .melhores_musicas .icones {
+        position: absolute;
+        top: -46px;
+        right: 30%;
+        
+
+    
+       
+    }
+
+    header .melhores_musicas .icones::before {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 190px;
+        background: #111727;
+        z-index: -1;
+        border-radius: 50% 50% 0% 0%;
+        left: -20%;
+        box-shadow:0px -11px 20px  -17px #000 ;
+
+    }
+
+    header .melhores_musicas .wave {
+        position: absolute;
+        top: -90px;
+        width: 40px;
+        height: 40px;
+        right: 45%;
+    }
+
+    header .melhores_musicas .wave .wave1 {
+        
+        width: 8px;
+
+
+    }
+}
+@media screen and (max-width: 470px){
+    header .musicas_lateral nav .pesquisar {
+        display: flex;
+        width: 150px;
+        margin-right: 5px;
+
+
+    }
+    header .melhores_musicas .wave {
+        right: 44%;
+    }
+header .menu_lateral{
+    width: 70%;
+}
+header .musicas_lateral .musicas_populares {
+
+    margin-top: 40px;
+    /* border: 1px solid #fff;*/
+ 
+ }
+
+}
+
+
+@media screen and (max-width: 412px){
+header .musicas_lateral nav ul li{
+    font-size: 10px;
+    margin-right: 7px ;
+}
+header .musicas_lateral nav .pesquisar{
+    width: 140px;
+}
+header .musicas_lateral .musicas_populares{
+    margin-top: 60px;
+}
+header .melhores_musicas .wave{
+    right: 45%;
+}
+header .menu_lateral{
+    width: 80%;
+}
+}
+/*Bumba caetano chiueue*/
