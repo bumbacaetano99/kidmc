@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>músicas</title>
   <link rel="stylesheet" href="Estilos/music.css">
+  <link rel="stylesheet" href="Estilos/media.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <script defer src="js/music.js"></script>
 </head>
@@ -13,6 +15,7 @@
 <body>
   <header>
     <div class="menu_lateral"><!--MENU-LATERAL-->
+    <h6 id="menu_lista_active_botao"><i class="bi bi-music-note-list"></i></h6>
       <h1>Playlist</h1>
       <div class="playlist"> <!--Abrir playlist-->
         <h4 class="active"><span></span> <i class="bi bi-music-note-beamed"></i>PlayList</h4>
@@ -420,6 +423,28 @@
     </div><!--Fechar melhores musicas-->
 
   </header>
+  <script>
+    
+let menu_lista_active_botao=document.getElementById('menu_lista_active_botao')
+let menu_lateral=document.getElementsByClassName('menu_lateral')[0]
+
+menu_lista_active_botao.addEventListener('click', ()=>{
+    menu_lateral.style.transform="unset"
+    menu_lista_active_botao.style.opacity=0
+
+    
+
+})
+let musicas_lateral=document.getElementsByClassName('musicas_lateral')[0]
+musicas_lateral.addEventListener('click', ()=>{
+    menu_lateral.style.transform="translateX(-100%)"
+    menu_lista_active_botao.style.opacity=1
+  
+  
+})
+
+
+  </script>
 
 </body>
 
